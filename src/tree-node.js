@@ -13,7 +13,7 @@ export default class TreeNode {
     }
 
     add(val) {
-        let node = (val instanceof TreeNode)
+        let node = val instanceof TreeNode
             ? val
             : new TreeNode(val);
         node.parent = this;

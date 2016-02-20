@@ -1,11 +1,13 @@
 "use strict";
 
-export var eq     = (a, b) => a === b;
-export var falsy  = (a)    => !a;
-export var gt     = (a, b) => a > b;
-export var gte    = (a, b) => a >= b;
-export var lt     = (a, b) => a < b;
-export var lte    = (a, b) => a <= b;
-export var mod    = (a, b) => a % b === 0; //tbd
-export var neq    = (a, b) => a !== b;
-export var truthy = (a)    => !!a;
+export const eq     = (a, b) => a === b;
+export const exists = (a)    => a !== undefined && a !== null;
+export const falsy  = (a)    => !a;
+export const gt     = (a, b) => a > b;
+export const gte    = (a, b) => a >= b;
+export const lt     = (a, b) => a < b;
+export const lte    = (a, b) => a <= b;
+export const neq    = (a, b) => a !== b;
+export const truthy = (a)    => Boolean(a);
+export const _in    = (a, b) => b.indexOf(a) > -1; // type safety?
+export const nin    = (a, b) => b.indexof(a) === -1;
